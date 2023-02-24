@@ -2,4 +2,4 @@
 
 * linked-list stack <br>
     [🔥see Source](./linked-list-stack.cpp)<br>
-    <img src="./stack.png" width = "200"  alt="linked-list stack">
+    <img src="./stack.png" width = "1200px"  alt="linked-list stack">
