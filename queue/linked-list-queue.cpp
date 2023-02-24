@@ -77,20 +77,20 @@ void Queue::pop() {
     try {
         switch (empty())
         {
-            case 0:
-            {
-                NodeOfQueue* tempNode = frontNode;
-                frontNode = frontNode->getNextNodePointer();
-                if(frontNode == rearNode){ frontNode = NULL; rearNode = NULL; }
-                else{ delete tempNode; }
-                queueCurrentSize--;
-                break;
-            }
-            case 1:
-            {
-                throw OutOfBoundError();
-                break;
-            }
+        case 0:
+        {
+            NodeOfQueue* tempNode = frontNode;
+            if (frontNode == rearNode) { frontNode = NULL; rearNode = NULL; return; }
+            frontNode = frontNode->getNextNodePointer(); 
+            delete tempNode; 
+            queueCurrentSize--;
+            break;
+        }
+        case 1:
+        {
+            throw OutOfBoundError();
+            break;
+        }
         }
     }
     catch (OutOfBoundError outOfBoundError) {
